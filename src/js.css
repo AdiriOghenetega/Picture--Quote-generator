@@ -73,7 +73,7 @@ border: 1px solid #711F8D;
   position: relative;
 width: 477px;
 height: 500px;
-z-index: 1;
+z.js: 1;
 border-radius: 2px;
 }
 .text-img{
@@ -99,14 +99,14 @@ font-style: normal;
 word-spacing: 2px;
 font-size: 30px;
 line-height: 39px;
-z-index: 2;
+z.js: 2;
 }
 .download__icon{
   margin-left: 1em;
   background-color: white;
   width: fit-content;
   transform: translateY(-250%);
-  z-index: 2;
+  z.js: 2;
   color: green;
   border-radius: .2em;
 }
