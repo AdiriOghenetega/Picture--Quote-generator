@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState,useEffect } from "react";
 import Header from "./header";
 import Generator from "./generator";
 import { createClient } from 'pexels';
@@ -61,7 +60,8 @@ client.photos.search({ query, per_page: 80 }).then(photos => {
 
   return (
     <div className="App">
-      <Header />
+    <div className="App__container">
+    <Header />
       <Generator
         key={meme.id}
         display={memeDisplay.randomImage}
@@ -74,6 +74,7 @@ client.photos.search({ query, per_page: 80 }).then(photos => {
         handleCategorySelect={handleCategorySelect}
         cardCategory={cardCategory}
       />
+    </div>
     </div>
   );
 }

@@ -6,51 +6,42 @@ header{
   flex-direction: row;
   align-items: center;
   padding: 0px 0px 0px 20px;
-  gap: 6.69px;
-  
-}
-header>img{
-  position: relative;
-width: 31.31px;
-height: 26.22px;
-
 }
 header>h1{
   position: relative;
 width: auto;
 height: 24px;
-
-
 font-family: 'Karla';
 font-style: normal;
 font-weight: 700;
 font-size: 20.7482px;
 line-height: 24px;
 letter-spacing: -0.1em;
-
 color: #FFFFFF;
-
 }
 .gen{
-  padding: 36px;
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  justify-content: space-around;
+  align-items: center;
+  width: 99%;
+  height: 90%;
 }
 .gen-inputs{
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  justify-content: space-around;
-  
+  justify-content: space-between;
+  width: 90%;
+  position: relative;
 }
 .gen-inputs>.inputed{
-  box-sizing: border-box;
+box-sizing: border-box;
 position: relative;
-left: 1px;
 width: 50%;
 height: 100px;
-border: 1px solid #D5D4D8;
+
 border-radius: 5px;
 }
 .inputed2{
@@ -58,11 +49,17 @@ border-radius: 5px;
   padding: .5em;
   height: 2em;
 }
+.gen--button_container{
+  position : relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .gen--button{
-  width: 477px;
+  width: 90%;
 height: 40px;
-left: 36px;
-top: 151px;
 cursor: pointer;
 background: linear-gradient(90.41deg, #2a8d1f 1.14%, #A818DA 100%);
 border-radius: 5px;
@@ -71,20 +68,19 @@ border: 1px solid #711F8D;
 }
 .meme-images{
   position: relative;
-width: 477px;
-height: 500px;
+width: 90%;
+height: 100%;
 z-index: 1;
 border-radius: 2px;
 }
 .text-img{
   position: relative;
-  height: 500px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* background-repeat: no-repeat;
-  background-size: cover; */
+  width: 100%;
 }
 
 .text-img> p{
@@ -109,4 +105,54 @@ z-index: 2;
   z-index: 2;
   color: green;
   border-radius: .2em;
+}
+@media screen and (max-width: 1200px){
+  .gen-inputs>.inputed{
+    height: 5em;
+  }
+  .text-img{
+    height: 350px;
+  }
+  
+}
+@media screen and (max-width: 600px){
+  .gen-inputs{
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 9em;
+  }
+  .gen-inputs>.inputed{
+    width: 100%;
+    height: 6em;
+  }
+  .inputed2{
+    height: 1.5em;
+  }
+  .gen{
+    padding: 0.5em;
+    width: 95%;
+    height: 85%;
+  }
+  .text-img{
+    height: 350px;
+   
+  }
+  .text-img> p{
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 425px){
+  .gen-inputs{
+    height: 8em;
+  }
+  .gen{
+    width: 93%;
+  }
+  .text-img{
+    height: 360px;
+  }
+  .text-img> p{
+    font-size: 15px;
+  }
 }

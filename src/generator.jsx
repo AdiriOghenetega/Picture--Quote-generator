@@ -39,9 +39,13 @@ export default function Generator(props) {
           name="cardcategory"
         />
       </div>
+      
+      <div className="gen--button_container">
       <button className="gen--button" onClick={props.switch}>
         Get a new image
       </button>
+      </div>
+
       <div className="text-img" 
       // style={{backgroundImage: `url(${props.display})`}}
       >
@@ -52,7 +56,7 @@ export default function Generator(props) {
         >
           {props.top}
         </p>
-        <img src={props.display} className="meme-images"  crossOrigin="anonymous"/>
+        <img src={props.display} className="meme-images" alt="themeimage" crossOrigin="anonymous"/>
         
         
       </div>
