@@ -31,9 +31,19 @@ client.photos.search({ query, per_page: 80 }).then(photos => {
   const category = selected.target.value; 
     setCardCategory(category)
   }
-  console.log(cardCategory)
+  function tempAlert(msg,duration)
+{
+ var el = document.createElement("div");
+ el.setAttribute("style","position:absolute;top:1%;background-color:white;z-index:3;padding:0 1em");
+ el.innerHTML = msg;
+ setTimeout(function(){
+  el.parentNode.removeChild(el);
+ },duration);
+ document.body.appendChild(el);
+}
 
   function handleClick() {
+    tempAlert("reshuffling image might take a second , hang in there...",1000);
     const rand = Math.floor(Math.random() * meme.length);
     let memeRandom ;
     if (meme){
